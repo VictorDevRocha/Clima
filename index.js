@@ -34,7 +34,7 @@ async function getDataApi() {
   }
 }
 
-// COLOCANDO OS VALORES NO HTML E MUDANDO O DISPLAY
+// COLOCANDO OS VALORES NO HTML
 function loadData(data) {
   place.innerHTML = `${data.name}, ${data.sys.country}`;
   degrees.innerHTML = `Temperatura: ${Math.floor(data.main.temp)}° C`;
