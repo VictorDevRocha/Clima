@@ -17,7 +17,7 @@ button.addEventListener("click", () => {
 async function getDataApi() {
   let url = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURI(
     input.value
-  )}&units=metric&appid=YOUR_TOKEN`;
+  )}&units=metric&appid=${YOUR_TOKEN}`;
 
   try {
     await fetch(url)
@@ -26,7 +26,6 @@ async function getDataApi() {
         if (data?.cod && data.cod === "404") {
           return alert("Local não encontrado!");
         }
-
         loadData(data);
       });
   } catch (error) {
