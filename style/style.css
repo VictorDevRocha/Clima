@@ -23,8 +23,17 @@ main {
 
 header {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  text-align: center;
   gap: 5px;
+}
+
+header h1 {
+  padding-right: 35px;
+}
+
+.inputC {
+  display: flex;
 }
 
 input {

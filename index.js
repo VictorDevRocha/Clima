@@ -17,7 +17,7 @@ button.addEventListener("click", () => {
 async function getDataApi() {
   let url = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURI(
     input.value
-  )}&units=metric&appid=96cfd6742535ef214434fa4923395860`;
+  )}&units=metric&appid=YOUR_TOKEN`;
 
   try {
     await fetch(url)
@@ -34,7 +34,7 @@ async function getDataApi() {
   }
 }
 
-// COLOCANDO OS VALORES NO HTML E MUDANDO O DISPLAY
+// COLOCANDO OS VALORES NO HTML
 function loadData(data) {
   place.innerHTML = `${data.name}, ${data.sys.country}`;
   degrees.innerHTML = `Temperatura: ${Math.floor(data.main.temp)}° C`;
